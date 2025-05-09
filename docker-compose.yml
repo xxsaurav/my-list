@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  backend:
+    build: .
+    container_name: my-list-backend
+    restart: unless-stopped
+    ports:
+      - "3333:3333"
+    environment:
+      - MONGO_URI=mongodb+srv://abcd:SXguwBSgJ9NqURGd@cluster0.l16z1nh.mongodb.net/
+      - DB_NAME=my-ott
+      - PORT=3333
